@@ -9,20 +9,24 @@ export default function Navigation() {
           <StyledNavigationLink href={"/"}>Home</StyledNavigationLink>
         </StyledNavigationItem>
         <StyledNavigationItem>
-          <StyledNavigationLink href={"/"}>Link 1</StyledNavigationLink>
+          <StyledNavigationLink href={"/"}>Random</StyledNavigationLink>
         </StyledNavigationItem>
         <StyledNavigationItem>
-          <StyledNavigationLink href={"/"}>Link 2</StyledNavigationLink>
+          <StyledNavigationLink href={"/"}>Favorites</StyledNavigationLink>
         </StyledNavigationItem>
         <StyledNavigationItem>
-          <StyledNavigationLink href={"/"}>Link 3</StyledNavigationLink>
+          <StyledNavigationLink href={"/"}>Get creative</StyledNavigationLink>
         </StyledNavigationItem>
       </StyledNavigationList>
     </StyledNavigation>
   );
 }
 
-const StyledNavigation = styled.nav``;
+const StyledNavigation = styled.nav`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+`;
 
 const StyledNavigationList = styled.ul`
   display: flex;

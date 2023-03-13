@@ -21,4 +21,5 @@ const StyledCard = styled.article`
   gap: 10px;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 `;
