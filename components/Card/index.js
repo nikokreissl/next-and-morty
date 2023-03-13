@@ -2,16 +2,11 @@ import Image from "next/image";
 import styled from "styled-components";
 import Button from "../Button";
 
-export default function Card() {
+export default function Card({ name, image }) {
   return (
     <StyledCard>
-      <Image
-        src={"https://rickandmortyapi.com/api/character/avatar/2.jpeg"}
-        alt={"Morty Smith"}
-        width={200}
-        height={200}
-      />
-      <h2>Morty Smith</h2>
+      <Image src={image} alt={name} width={200} height={200} />
+      <h2>{name}</h2>
       <Button>View Details</Button>
     </StyledCard>
   );
@@ -26,4 +21,5 @@ const StyledCard = styled.article`
   gap: 10px;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 `;
