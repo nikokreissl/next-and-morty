@@ -1,13 +1,19 @@
 import Image from "next/image";
 import styled from "styled-components";
 import Button from "../Button";
+import { useRouter } from "next/router";
 
-export default function Card({ name, image }) {
+export default function Card({ name, image, id }) {
+  const router = useRouter();
+  function handleClick(id) {
+    router.push(`/characters/${id}`);
+  }
+
   return (
     <StyledCard>
       <Image src={image} alt={name} width={200} height={200} />
       <h2>{name}</h2>
-      <Button>View Details</Button>
+      <Button onClick={() => handleClick(id)}>View Details</Button>
     </StyledCard>
   );
 }
